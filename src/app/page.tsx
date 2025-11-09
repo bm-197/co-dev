@@ -13,6 +13,7 @@ export default function Page() {
   const invoke = useMutation(trpc.invoke.mutationOptions({
     onSuccess: () => {
       toast.success("Background job started")
+      setValue("")
     }
   }))
   return (
